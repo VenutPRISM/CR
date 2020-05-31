@@ -1,5 +1,5 @@
 
-/*  Парсер Bison, созданный из comp.y 
+/*  parser Bison, sozdan is comp.y 
   */
 
 #define YYBISON 1  /* Opredelit' vykhod.  */
