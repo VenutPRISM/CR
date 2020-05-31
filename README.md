@@ -12,4 +12,7 @@
 2. можно скормить файл командой "simpcomp.exe file.s" (В РАЗРАБОТКЕ)
 
 Карта по файлам:
+
+
+
 ![Image alt](https://github.com/VenutPRISM/CR/raw/master/Screenshots/map.PNG)
