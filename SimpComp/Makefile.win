@@ -1,0 +1,33 @@
+CC = cl $(CFLAGS)
+
+# CFLAGS = -g -O0 -Wno-unused -Wno-unused-function -Wno-unused-label -Wno-error
+CFLAGS = /TP /EHsc /DMSWINDOWS
+
+simpcomp: comp.y scan.l parser.h \
+	nt.obj tree.obj lt.obj icode.obj interpret.obj value.obj
+	.\flex -8 scan.l
+	.\bison -o comp.cpp -d -v comp.y
+        $(CC) /c comp.cpp
+        $(CC) /c lex.yy.c
+        link /out:simpcomp.exe *.obj
+
+nt.obj: nt.cpp nt.h value.h
+        $(CC) /c nt.cpp
+
+tree.obj: tree.cpp tree.h nt.h lextypes.h
+        $(CC) /c tree.cpp
+
+value.obj: value.cpp value.h nt.h lextypes.h
+        $(CC) /c value.cpp
+
+lt.obj: lt.cpp lt.h value.h icode.h
+        $(CC) /c lt.cpp
+
+icode.obj: icode.cpp icode.h lt.h nt.h
+        $(CC) /c icode.cpp
+
+interpret.obj: interpret.cpp interpret.h nt.h lt.h value.h icode.h
+        $(CC) /c interpret.cpp
+
+clean:
+        del /Q /F *.tab.c* *.tab.h* *.yy.c* *.output comp.cpp* *.o simpcomp simpcomp.exe *.obj

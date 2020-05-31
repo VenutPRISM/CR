@@ -1,0 +1,27 @@
+Simple Compiler                               ‰   ‰
+v0.string_value                               ‰   ‰
+Parser                                        ‰   ‰comp.y
+    Definitions                               ‰   ‰parser.h
+    Values of lexemes                         ‰   ‰lextypes.h
+Scanner                                       ‰   ‰scan.l
+String pool                                   ‰   ‰strpool.h
+    Implementation                            ‰   ‰strpool.cpp
+Name table                                    ‰   ‰nt.h
+    Implementation                            ‰   ‰nt.cpp
+Value                                         ‰   ‰value.h
+    Implementation                            ‰   ‰value.cpp
+L1List                                        ‰   ‰lst.h
+    Implementation                            ‰   ‰lst.cpp
+Tree                                          ‰   ‰tree.h
+v0.string_value                               ‰   ‰
+    Implementation                            ‰   ‰tree.cpp
+Intermediate Code                             ‰   ‰icode.h
+    Implementation                            ‰   ‰icode.cpp
+Label table                                   ‰   ‰lt.h
+    Implementation                            ‰   ‰lt.cpp
+Interpretator                                 ‰   ‰interpret.h
+    Implementation                            ‰   ‰interpret.cpp
+Text String                                   ‰   ‰txtstr.h
+    Implementation                            ‰   ‰txtstr.cpp
+Makefile                                      ‰   ‰Makefile
+                                              ‰   ‰.
