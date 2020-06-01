@@ -6,7 +6,7 @@ CFLAGS = /TP /EHsc /DMSWINDOWS
 simpcomp: comp.y scan.l parser.h \
 	nt.obj tree.obj lt.obj icode.obj interpret.obj value.obj
 	.\flex -8 scan.l
-	.\bison -o comp.cpp -d -v comp.y
+	.\bison -o comp.cpp -d -v comp.y 
         $(CC) /c comp.cpp
         $(CC) /c lex.yy.c
         link /out:simpcomp.exe *.obj

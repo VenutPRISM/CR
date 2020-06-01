@@ -1,6 +1,7 @@
 //
 // table imen
 //
+
 #ifndef NT_H
 #define NT_H
 #include <string>

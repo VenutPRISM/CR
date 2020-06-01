@@ -4,6 +4,7 @@
 
 #define YYBISON 1  /* Opredelit' vykhod.  */
 
+
 #define	NAME	258
 #define	INT_CONST	259
 #define	DOUBLE_CONST	260

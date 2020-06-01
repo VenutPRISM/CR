@@ -4,6 +4,8 @@ CC = g++ $(CFLAGS)
 ### CFLAGS = -g -O0 -Wno-unused -Wno-unused-function -Wno-unused-label -Wno-error -w
 CFLAGS = -g -O0 -Wno-unused -Wno-unused-function -Wno-unused-label -Wno-error
 
+
+
 simpcomp: comp.y scan.l parser.h \
 	nt.o tree.o lt.o icode.o interpret.o value.o
 	flex -8 scan.l
